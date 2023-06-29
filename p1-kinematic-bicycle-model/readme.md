@@ -14,7 +14,7 @@ You need a notebook tool whether it is a [Google colab](https://colab.research.g
 
 ## Usage
 
-Run the notebook each cell by cell to get to see the results.
+Run the notebook cell by cell to get to see the results.
 
 ## Model Output
 
