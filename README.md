@@ -15,7 +15,7 @@ I hope you find this helpful and helps gather more resources around self-driving
 
 ## Table of Contents 
 
-- [P1-kinematic-bicycle-model](https://github.com/afondiel/self-driving-car-projects/blob/main/p1-kinematic-bicycle-model/Kinematic_Bicycle_Model.ipynb)
+- [P1-kinematic-bicycle-model](https://github.com/afondiel/self-driving-car-projects/tree/main/p1-kinematic-bicycle-model)
 - [P2-vehicle-longitudinal-model](#)
 - [P3-self-driving-vehicle-control](#)
 - [P4-self-driving-vehicle-trajectory-estimation](#)
