@@ -18,7 +18,7 @@ Run the notebook each cell by cell to get to see the results.
 
 ## Model Output
 
-![](./output8.png)
+![](./output-8.png)
 
 ## Contributing & Pull Request
 
