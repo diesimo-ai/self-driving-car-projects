@@ -1,0 +1,10 @@
+
+# Log files
+*.log
+*.log.*
+
+.vscode
+__pycache__
+
+documentation/
+
