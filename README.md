@@ -36,5 +36,7 @@ I hope you find this helpful.
 
 ## References
 
-- https://github.com/afondiel/Self-Driving-Cars-Specialization-Coursera
-- https://github.com/ndrplz/self-driving-car
+- [Self-Driving Cars Specialization Courses - UoF](https://github.com/afondiel/Self-Driving-Cars-Specialization-Coursera)
+- [Udacity Self-Driving Car Engineer Nanodegree projects - Andrea Palazzi ](https://github.com/ndrplz/self-driving-car)
+
+
