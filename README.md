@@ -1,4 +1,4 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/afondiel/self-driving-car-projects.svg) ![Packagist Stars](https://img.shields.io/github/stars/afondiel/self-driving-car-projects.svg) ![Packagist forks](https://img.shields.io/github/forks/afondiel/self-driving-car-projects.svg)
+![GitHub repo size](https://img.shields.io/github/repo-size/afondiel/self-driving-car-projects.svg) ![Packagist Stars](https://img.shields.io/github/stars/afondiel/self-driving-car-projects.svg) ![Packagist forks](https://img.shields.io/github/forks/afondiel/self-driving-car-projects.svg) ![GitHub](https://img.shields.io/github/license/afondiel/self-driving-car-projects)
 
 # Self-Driving Car Projects
 
@@ -22,8 +22,8 @@ I hope you find this helpful.
 ## Table of Contents 
 
 - [P1-kinematic-bicycle-model](https://github.com/afondiel/self-driving-car-projects/tree/main/p1-kinematic-bicycle-model)
-- [P2-vehicle-longitudinal-model](#)
-- [P3-self-driving-vehicle-control](#)
+- [P2-vehicle-longitudinal-model](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p2-vehicle-longitudinal-model)
+- [P3-self-driving-vehicle-control](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p3-self-driving-vehicle-control)
 - [P4-self-driving-vehicle-trajectory-estimation](#)
 - [P5-extend-kalman-filter-EKF](#)
 - [P6-self-driving-car-state-estimator](#)
