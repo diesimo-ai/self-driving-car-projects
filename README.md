@@ -1,4 +1,4 @@
-![GitHub repo size](https://img.shields.io/github/repo-size/afondiel/self-driving-car-projects.svg) ![Packagist Stars](https://img.shields.io/github/stars/afondiel/self-driving-car-projects.svg) ![Packagist forks](https://img.shields.io/github/forks/afondiel/self-driving-car-projects.svg) ![GitHub](https://img.shields.io/github/license/afondiel/self-driving-car-projects)
+![GitHub repo size](https://img.shields.io/github/repo-size/afondiel/self-driving-car-projects.svg) ![Packagist Stars](https://img.shields.io/github/stars/afondiel/self-driving-car-projects.svg) ![Packagist forks](https://img.shields.io/github/forks/afondiel/self-driving-car-projects.svg) ![GitHub](https://img.shields.io/github/license/diesimo-ai/self-driving-car-projects)
 
 # Self-Driving Car Projects
 
