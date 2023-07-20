@@ -24,14 +24,13 @@ I hope you find this helpful.
 - [P1-kinematic-bicycle-model](https://github.com/afondiel/self-driving-car-projects/tree/main/p1-kinematic-bicycle-model)
 - [P2-vehicle-longitudinal-model](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p2-vehicle-longitudinal-model)
 - [P3-self-driving-vehicle-control](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p3-self-driving-vehicle-control)
-- [P4-self-driving-vehicle-trajectory-estimation](#)
-- [P5-extend-kalman-filter-EKF](#)
-- [P6-self-driving-car-state-estimator](#)
-- [P7-visual-odometry-for-localization](#)
-- [P8-self-driving-car-environment-perception](#)
-- [P9-occupancy-grid-map-generator](#)
-- [P10-pathfinding-algorithms](#)
-- [P11-self-driving-car-motion-planner](#)
+- [P4-self-driving-vehicle-trajectory-estimation](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p4-self-driving-vehicle-trajectory-estimation)
+- [P5-self-driving-car-state-estimator](#)
+- [P6-visual-odometry-for-localization](#)
+- [P7-self-driving-car-environment-perception](#)
+- [P8-occupancy-grid-map-generator](#)
+- [P9-pathfinding-algorithms](#)
+- [P10-self-driving-car-motion-planner](#)
 
 
 ## References
