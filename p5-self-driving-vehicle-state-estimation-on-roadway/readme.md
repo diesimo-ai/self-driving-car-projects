@@ -22,7 +22,31 @@ We incorporate the measurement by performing the Kalman filter update step :
 The Estimator operates in 3 phases : 
 
 - **Taks 1**: perform the filter prediction step and the correction step  
+
+The following block of code determines the rotation between the LIDAR sensor frame and the IMU frame
+
+```python
+# This is the correct calibration rotation matrix, corresponding to an euler rotation of 0.05, 0.05, .1.
+C_li = np.array([
+    [ 0.99376, -0.09722,  0.05466],
+    [ 0.09971,  0.99401, -0.04475],
+    [-0.04998,  0.04992,  0.9975 ]
+])
+```
+
 - **Task 2**: handles the effects of sensor miscalibration on the vehicle pose estimates. A filter parameters (noise variances) adjustment is needed in this phase to attempt to compensate for these errors
+
+The following chunk of code is a sensor miscalibration to perform task 2
+
+```python
+# This is an incorrect calibration rotation matrix, corresponding to a rotation of 0.05, 0.05, 0.05
+C_li = np.array([
+    [ 0.9975 , -0.04742,  0.05235],
+    [ 0.04992,  0.99763, -0.04742],
+    [-0.04998,  0.04992,  0.9975 ]
+])
+```
+
 - **Task 3**: examine how the loss of external corrections results in drift in the vehicle position estimate, and how the uncertainty in the position estimate changes when sensor measurements are unavailable.
 
 
