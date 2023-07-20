@@ -5,6 +5,8 @@
 
 This is an implementation of Extended Kalman filter (EKF), which will estimate the position of a vehicle along a given [trajectory](./data/) of a vehicle using odometry, range and bearing measurements.
 
+![image](https://github.com/afondiel/Self-Driving-Cars-Specialization-Coursera/blob/main/Course2-State-Estimation-and-Localization-for-Self-Driving-Cars/resources/w2/l3-EKF8-short.png?raw=true)
+
 The system uses two models : 
 1. Measurement model (sensor based) 
 2. Motion model 
