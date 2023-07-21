@@ -21,7 +21,7 @@ The data samples were taken from Carla Simulator.
     - `depth` - 52 data frames
     - `rgb` - 52 data frames
 
-You need to create a dataset handler object to access the datas. The dataset handler class to read and iterate through samples
+You need to create a dataset handler object to access the datas. The dataset handler class is definded in the [m2bk module](m2bk.py), and allows to read and iterate through samples
 
 ```python
 dataset_handler = DatasetHandler()
