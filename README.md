@@ -26,7 +26,7 @@ I hope you find this helpful.
 - [P3-self-driving-vehicle-control](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p3-self-driving-vehicle-control)
 - [P4-self-driving-vehicle-trajectory-estimation](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p4-self-driving-vehicle-trajectory-estimation)
 - [P5-self-driving-vehicle-state-estimation-on-roadway](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p5-self-driving-vehicle-state-estimation-on-roadway)
-- [P6-visual-odometry-for-localization](#)
+- [P6-visual-odometry-for-localization](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p6-visual-odometry-for-localization)
 - [P7-self-driving-car-environment-perception](#)
 - [P8-occupancy-grid-map-generator](#)
 - [P9-pathfinding-algorithms](#)
