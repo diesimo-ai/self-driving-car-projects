@@ -19,6 +19,7 @@ Here @diesimo-ai, we believe that in order to speed up the self-driving developm
 
 I hope you find this helpful.
 
+Cheers [@Muntu](https://github.com/afondiel)
 ## Table of Contents 
 
 - [P1-kinematic-bicycle-model](https://github.com/afondiel/self-driving-car-projects/tree/main/p1-kinematic-bicycle-model)
@@ -28,7 +29,7 @@ I hope you find this helpful.
 - [P5-self-driving-vehicle-state-estimation-on-roadway](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p5-self-driving-vehicle-state-estimation-on-roadway)
 - [P6-visual-odometry-for-localization](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p6-visual-odometry-for-localization)
 - [P7-self-driving-car-environment-perception](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p7-self-driving-car-environment-perception)
-- [P8-occupancy-grid-map-generator](#)
+- [P8-occupancy-grid-map-generator](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p8-occupancy-grid-map-generator)
 - [P9-pathfinding-algorithms](#)
 - [P10-self-driving-car-motion-planner](#)
 
