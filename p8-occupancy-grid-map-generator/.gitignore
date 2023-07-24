@@ -1,0 +1,11 @@
+
+# Log files
+*.log
+*.log.*
+*.mp4
+
+.vscode
+__pycache__
+
+documentation/
+
