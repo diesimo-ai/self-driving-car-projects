@@ -30,7 +30,7 @@ Cheers [@Muntu](https://github.com/afondiel)
 - [P6-visual-odometry-for-localization](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p6-visual-odometry-for-localization)
 - [P7-self-driving-car-environment-perception](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p7-self-driving-car-environment-perception)
 - [P8-occupancy-grid-map-generator](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p8-occupancy-grid-map-generator)
-- [P9-pathfinding-algorithms](#)
+- [P9-pathfinding-algorithms](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p9-pathfinding-algorithms)
 - [P10-self-driving-car-motion-planner](#)
 
 
