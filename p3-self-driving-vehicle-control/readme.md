@@ -23,7 +23,7 @@ The waypoints include their `positions` as well as `the speed` the vehicles shou
 
 - After downloading the carla simulator you need to setup your working environment as follow
 
-<img src="./doc/project-location.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+<img src="..\p10-self-driving-car-motion-planner\doc\project-location.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
 1. Navigate to the `PythonClient` folder located in the main `CarlaSimulator` directory.
 2. Replace all the existing files in the `Course4FinalProject` folder with the files from your project repository (either #3 or #10).
