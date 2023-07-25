@@ -31,8 +31,19 @@ Cheers [@Muntu](https://github.com/afondiel)
 - [P7-self-driving-car-environment-perception](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p7-self-driving-car-environment-perception)
 - [P8-occupancy-grid-map-generator](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p8-occupancy-grid-map-generator)
 - [P9-pathfinding-algorithms](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p9-pathfinding-algorithms)
-- [P10-self-driving-car-motion-planner](#)
+- [P10-self-driving-car-motion-planner](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p10-self-driving-car-motion-planner)
 
+## Environment Setup for Project 3 and Project 10
+
+- After downloading the carla simulator you need to setup your working environment as follow
+
+<img src="./p10-self-driving-car-motion-planner/doc/project-location.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+1. Navigate to the `PythonClient` folder located in the main `CarlaSimulator` directory.
+2. Replace all the existing files in the `Course4FinalProject` folder with the files from your project repository (either #3 or #10).
+3. Feel free to rename this folder to the name of the project you want to test, such as `p3_or_10_project_name` 
+
+You're ready to go!
 
 ## References
 
