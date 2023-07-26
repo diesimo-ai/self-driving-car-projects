@@ -2,7 +2,7 @@
 
 ## Overview
 
-The goal of this project will be to have a functional **`motion planning stack`** that can avoid both **static** and **dynamic** obstacles while tracking the **center line of a lane**, while also **handling stop signs**. 
+This is a functional **`motion planning stack`** that can avoid both **static** and **dynamic** obstacles while tracking the **center line of a lane**, while also **handling stop signs**. 
 
 The system takes a set of `way-points` in a given road network until it reachs a goal
 
@@ -24,7 +24,7 @@ class Controller2D(object):
 ## Carla Installation & Environment Setup
 
 - [Modified Carla simulator](#) for this project which has some additional maps included.
-  - Please refer to this [guide](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/resources/customized-carla-simulator) to download the installations setup
+  - Please refer to this [guide](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/resources/customized-carla-simulator) document to download the installation setups
 
 - After downloading the carla simulator you need to setup your working environment as follow
 
@@ -38,7 +38,7 @@ class Controller2D(object):
 
 Strongly recommend to work on conda and create a new python environment and then install all your dependencies
 
-- Make sure install the required dependencies for this current version of Carla Simulator: 
+- Make sure install the required dependencies for this current version of Carla Simulator first: 
  
 ```
 - Pillow>=3.1.2
