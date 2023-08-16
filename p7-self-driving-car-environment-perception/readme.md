@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a `baseline perception stack` for Self-Driving Vehicles,which extract useful scene information from the environment to drive safely and reliably by perfoming complex tasks.
+This is a `baseline perception stack` for Self-Driving Vehicles, which gets useful information from its surroudings and perform complex tasks in order to drive safely through the environment.
 
 <img src="./doc/semantic-seg-output.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
@@ -13,19 +13,19 @@ The system uses the output of `semantic segmentation neural networks  model` to 
 - **Task 3**: Filter errors in the output of 2D object detectors
 - **Task 4**: Use the filtered 2D object detection results to determine how far `obstacles` are from the self-driving car
 
-The all tasks are well documented thourough the notebook.
+All tasks are well documented in the notebook.
 
 ### Dataset : images, images_rbg, depth_maps ... 
 
 The data samples provided were collected from Carla Simulator.
 
 - **Data Description** :
-  - [data](self-driving-car-projects\p6-visual-odometry-for-localization\data) folder containts 3 test data frame in a total of 47MB size
+  - [data](self-driving-car-projects\p6-visual-odometry-for-localization\data) folder has 3 test data frame, a total of 47MB
     - `depth` - depth images
     - `rgb` - RGB images
     - `segmentation` - the output of a semantic segmentation neural network
 
-You need to create a dataset handler object  to access the datas. The dataset handler class is defined in the [m6bk module](m6bk.py), and allow to read and iterate through samples
+You need to create a dataset handler object to access the datas. The dataset handler class is defined in the [m6bk module](m6bk.py), and allow to read and iterate through samples
 
 ```python
 dataset_handler = DatasetHandler()
@@ -62,7 +62,7 @@ conda install -r requirements.txt
 
 ## Usage
 
-You'll need a notebook tool such as a [Google Colab](https://colab.research.google.com/?utm_source=scs-index#scrollTo=5fCEDCU_qrC0) or [Jupyter notebook](https://jupyter.org/), then simply run the notebook each cell sequentially to see the results.
+You need a notebook tool such as [Google Colab](https://colab.research.google.com/?utm_source=scs-index#scrollTo=5fCEDCU_qrC0) or [Jupyter notebook](https://jupyter.org/). Run the notebook cell by cell sequentially to see the results.
 
 ## Expected results
 
@@ -81,7 +81,7 @@ You'll need a notebook tool such as a [Google Colab](https://colab.research.goog
 
 ## Contributing
 
-Please create a pull request if you want to take this project to a new next level. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
+Please create a pull request if you want to take this project to a new level. There are still great stuffs & cool ideas to add on. Do not hesitate to add your own ideas below.
 
 `@TODO - list`
 
