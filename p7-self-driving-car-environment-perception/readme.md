@@ -2,11 +2,11 @@
 
 ## Overview
 
-This is a `baseline perception stack` for Self-Driving Vehicles, which gets useful information from its surroudings and perform complex tasks in order to drive safely through the environment.
+This is a `baseline perception stack` for Self-Driving Vehicles, which extracts useful information from its surroudings and perform complex tasks in order to drive safely through the environment.
 
 <img src="./doc/semantic-seg-output.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The system uses the output of `semantic segmentation neural networks  model` to perform the following tasks: 
+The system uses the output of a `semantic segmentation neural networks model` like [SegNet](https://arxiv.org/abs/1511.00561), as input, to perform the following tasks: 
   
 - **Task 1**: Drivable space estimation in 3D
 - **Task 2**: Lane estimation
