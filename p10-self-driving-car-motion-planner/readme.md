@@ -2,9 +2,9 @@
 
 ## Overview
 
-This is a functional **`motion planning stack`** that can avoid both **static** and **dynamic** obstacles while tracking the **center line of a lane**, while also **handling stop signs**. 
+This is a functional **`motion planning stack`** that can avoid both **static** and **dynamic** obstacles while tracking the **center line of a lane** as well as **handling road signs**. 
 
-The system takes a set of `way-points` in a given road network until it reachs a goal
+The system takes a set of `way-points` in a given road network until it reaches a goal.
 
 The system performs the following tasks : 
 - **Task 1:** Path generation 
