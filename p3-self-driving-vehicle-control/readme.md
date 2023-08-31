@@ -6,7 +6,7 @@ This is a baseline self-driving controller which drives a car around a track in 
 
 <img src="./doc/racetrack-waypoints.png" width="520" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The controller gets a sorted list of `waypoints`, which are equally spaced along the trajectory path of a track, and navigates the full track effectively.
+The controller gets a sorted list of `waypoints` of path trajectory of a racing track, which are equally spaced and navigates the full track effectively.
 
 ```python
 class Controller2D(object):
