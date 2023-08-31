@@ -6,13 +6,24 @@ This is a functional **`motion planning stack`** that can avoid both **static** 
 
 The system takes a set of `way-points` in a given road network until it reaches a goal.
 
-The system performs the following tasks : 
-- **Task 1:** Path generation 
-- **Task 2:** Path collision checking (avoid static obstacles)
-- **Task 3:** Velocity profile (avoid dynamic obstacles)
-- **Task 4:** Behavioural planning State Machine
+The system performs the following tasks: 
+- **Task 1:** Path generation: for road navigation 
 
-`Note`: In order to focus solely on the planning aspects for the car, we will be reusing the controller from [project 3](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p3-self-driving-vehicle-control). 
+<img src="./doc/path-gen.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+- **Task 2:** Static obstacles avoidance
+
+<img src="./doc/static-obstacle.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+- **Task 3:** Dynamic obstacles avoidance
+
+<img src="./doc/dynamic-obstacle.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+- **Task 4:** Road signs handling: Stop Sign
+
+<img src="./doc/stop-sign.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+`Note`: This project is build on the top of the controller from [project 3](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/p3-self-driving-vehicle-control). 
 
 
 ```python
@@ -97,28 +108,28 @@ python module_7.py
 
 @TODO 
 
-- Task2 : Path collision checking and path selection (using circle based method), 
+- Task2 : Path collision checking and path selection (using circle based method)
 
-<img src="./doc/static-obstacle.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+@TODO
 
 - Task3: Velocity profile generation
 
-<img src="./doc/dynamic-obstacle.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+@TODO
 
-- Task4: Behavioural planning
+- Task4: Behavioural planning - `State Machine Approach`
 
-<img src="./doc/stop-sign.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+@TODO
 
 ## Contributing
 
-Please create a pull request if you want to take this project to a new next level. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
+Please create a pull request if you want to help this project grow. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
 
 `@TODO - list`
 
 ```
-- Convert notebook into a python project
-- Package the project into a PyPi package
-- Create a C++ version of the model
+- Package the project into a PyPi library
+- Create a C++ version of this project
+- Add logger handler module for debugging
 ...
 ```
 
