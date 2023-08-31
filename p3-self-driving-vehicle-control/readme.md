@@ -2,11 +2,11 @@
 
 ## Overview
 
-This is a simple self-driving controller aimed to drive a car around a track in Carla simulator.
+This is a baseline self-driving controller which drives a car around a track in Carla simulator.
 
 <img src="./doc/racetrack-waypoints.png" width="520" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The controller gets a sorted list of waypoints which are equally spaced on this track and navigates to all the waypoints effectively completes the full track 
+The controller gets a sorted list of `waypoints`, which are equally spaced along the trajectory path of a track, and navigates the full track effectively.
 
 ```python
 class Controller2D(object):
@@ -30,7 +30,7 @@ The waypoints include their `positions` as well as `the speed` the vehicles shou
 3. Feel free to rename this folder to the name of the project you want to test, such as `p3_or_10_project_name` 
 
 
-## Requirements
+## Requirements & Dependencies
 
 Strongly recommend to work on conda and create a new python environment and then install all your dependencies
 
@@ -97,14 +97,14 @@ The controller sends the throttle and brake commands from the longitudinal contr
 
 ## Contributing
 
-Please create a pull request if you want to take this project to a new next level. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
+Please create a pull request if you want to help this project grow. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
 
 `@TODO - list`
 
 ```
-- Convert notebook into a python project
-- Package the project into a PyPi package
+- Package the project into a PyPi library
 - Create a C++ version of the model
+- Add logger module for debugging 
 ...
 ```
 
