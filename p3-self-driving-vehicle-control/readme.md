@@ -2,11 +2,11 @@
 
 ## Overview
 
-This is a baseline self-driving controller which drives a car around a track in Carla simulator.
+This is a self-driving controller which tracks waypoints and navigates effectively along the racetrack in Carla simulator.
 
 <img src="./doc/racetrack-waypoints.png" width="520" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The controller gets a sorted list of `waypoints` of path trajectory of a racing track, which are equally spaced and navigates the full track effectively.
+The controller gets a sorted list of `waypoints` of path trajectory of a racetrack, which are equally spaced in the track.
 
 ```python
 class Controller2D(object):
@@ -14,14 +14,14 @@ class Controller2D(object):
       ...
 ```
 
-The waypoints include their `positions` as well as `the speed` the vehicles should attain.
+The waypoints are the reference signals, which include the `position` as well as the `speed` the vehicle should attain. 
 
 ## Carla Installation & Environment Setup
 
 - [Modified Carla simulator](#) for this project which has some additional maps included.
   - Please refer to this [guide](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/resources/customized-carla-simulator) to download the installations setup
 
-- After downloading the carla simulator you need to setup your working environment as follow
+- After downloading the carla simulator you need to setup your working environment as follow:
 
 <img src="..\p10-self-driving-car-motion-planner\doc\project-location.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
@@ -93,7 +93,7 @@ Controller Output:
 
 <img src="./doc/controller-output.png" width="800" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The controller sends the throttle and brake commands from the longitudinal control and steering angle commands from your lateral control. 
+The controller sends the throttle and brake commands from the `longitudinal control` and steering angle commands from the `lateral control`. 
 
 ## Contributing
 
