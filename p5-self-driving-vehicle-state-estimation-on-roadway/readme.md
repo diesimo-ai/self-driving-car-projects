@@ -2,20 +2,20 @@
 
 ## Overview
 
-This is a Self-Driving Vehicle State Estimation on Roadway implementation using an Error-State Extended Kalman Filter (ES-EKF) to localize a vehicle using data from the [CARLA simulator](https://carla.org/).
+This is a filter-based state estimator for self-driving vehicles, designed to determine the vehicle's position within an existing map in the [CARLA simulator](https://carla.org/).
 
-### State Estimation Pipeline 
+The system uses Error-State Extended Kalman Filter(ES-EKF) to `fuse` GPS, IMU, and LIDAR data from [CARLA simulator](https://carla.org/) to create a high-update-rate estimator to determining vehicle position and orientation while exploring sensor failure effects.
+### Estimator Architecture
 
 <img src="./doc/full-state-estimation-pipeline.png" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The dataset was gathered during a test drive in the CARLA simulator and contains measurements from sensors : 
-- `IMU` measurements are used to drive the motion model forward in time at a high update rate 
+The providen dataset was gathered during a test drive in the CARLA simulator and contains measurements from sensors: 
+- `IMU` measurements are used to drive `the motion model forward in time at a high update rate 
 - `GNSS` receiver or the `LIDAR` are used for position measurements 
   
-We incorporate the measurement by performing the Kalman filter update step :  
+The Kalman filter update step :  
 - The motion model produces the `predicted state` estimate.
 - The prediction correction loop is performed as long as the vehicle is driving, the result is the `corrected state` estimate. 
-
 
 ### Estimator Tasks
 
@@ -55,7 +55,7 @@ C_li = np.array([
 ```sh
 pip install -r requirements.txt
 ```
-or if you're conda
+or if you're using conda
 
 ```sh
 conda install -r requirements.txt
@@ -79,7 +79,6 @@ with open('data/pt3_data.pkl', 'rb') as file:
     data = pickle.load(file)
 ```
 
-
 To run the project simply perform 
 
 ```python 
@@ -94,22 +93,33 @@ python es_ekf.py
 
 **Output Estimate**
 
+<img src="./graph/estimator_1.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-<img src="./graph/es-ekf-output.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+Output for task 1, for the output of task 2 & 3 refer to [graph](./graph/) repo.
 
+**Error estimates**
 
+<img src="./graph/error_1.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+- The error for each of the 6 [DOF](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)), and estimates for the uncertainty 
+- The error estimates are in blue, and the uncertainty bounds are red and dashed.
+- The uncertainty bounds are +/-3 standard deviations(std) based on the uncertainty (covariance). 
+
+This estimator can be improved by performing some tuning on the measurements with the known ground truth and adjusting the measurement and process noise of the filter. 
 
 ## Contributing
 
-Please create a pull request if you want to take this project to a new next level. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
+What to help this project grow? 
+
+- Please create a pull request if you have any great idea to share, or an issue if you encoutered any problem while running the project.
+
 
 `@TODO - list`
 
 ```
-- Add a sensor fusion module
 - Package the project into a PyPi package
 - Create a C++ version of the model
+- add logger module for logging and debugging
 ...
 ```
-
 
