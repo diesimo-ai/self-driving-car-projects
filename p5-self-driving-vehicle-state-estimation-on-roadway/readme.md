@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a filter-based state estimator for self-driving vehicles, designed to determine the vehicle's position within an existing map in the [CARLA simulator](https://carla.org/).
+This is a filter-based state estimator for self-driving vehicles, designed to determine the vehicle's position on roadway, within an existing map in the [CARLA simulator](https://carla.org/).
 
 The system uses Error-State Extended Kalman Filter(ES-EKF) to `fuse` GPS, IMU, and LIDAR data from [CARLA simulator](https://carla.org/) to create a high-update-rate estimator to determining vehicle position and orientation while exploring sensor failure effects.
 ### Estimator Architecture
@@ -21,7 +21,7 @@ The Kalman filter update step :
 
 The Estimator operates in 3 phases : 
 
-- **Taks 1**: perform the filter prediction step and the correction step  
+- **Taks 1 - prediction and correct**: perform the filter prediction and the correction step  
 
 The following block of code determines the rotation between the LIDAR sensor frame and the IMU frame
 
@@ -34,7 +34,7 @@ C_li = np.array([
 ])
 ```
 
-- **Task 2**: handles the effects of sensor miscalibration on the vehicle pose estimates. A filter parameters (noise variances) adjustment is needed in this phase to attempt to compensate for these errors
+- **Task 2 - sensor miscalibration**: handles the effects of sensor miscalibration on the vehicle pose estimates. A filter parameters (noise variances) adjustment is needed in this phase to attempt to compensate for these errors
 
 The following chunk of code is a sensor miscalibration to perform task 2
 
@@ -47,7 +47,7 @@ C_li = np.array([
 ])
 ```
 
-- **Task 3**: examine how the loss of external corrections results in drift in the vehicle position estimate, and how the uncertainty in the position estimate changes when sensor measurements are unavailable.
+- **Task 3 - sensor dropout**: examine how the loss of external corrections results in drift in the vehicle position estimate, and how the uncertainty in the position estimate changes when sensor measurements are unavailable.
 
 
 ## Requirements
@@ -103,7 +103,7 @@ Output for task 1, for the output of task 2 & 3 refer to [graph](./graph/) repo.
 
 - The error for each of the 6 [DOF](https://en.wikipedia.org/wiki/Degrees_of_freedom_(statistics)), and estimates for the uncertainty 
 - The error estimates are in blue, and the uncertainty bounds are red and dashed.
-- The uncertainty bounds are +/-3 standard deviations(std) based on the uncertainty (covariance). 
+- The uncertainty bounds are $\displaystyle \pm 3 \sigma$ (standard deviations) based on the uncertainty (covariance). 
 
 This estimator can be improved by performing some tuning on the measurements with the known ground truth and adjusting the measurement and process noise of the filter. 
 
