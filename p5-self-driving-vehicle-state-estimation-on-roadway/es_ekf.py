@@ -308,10 +308,10 @@ plt.show()
 #     file.write(p2_str)
 
 # Pt. 3 submission
-p3_indices = [6800, 7600, 8400, 9200, 10000]
-p3_str = ''
-for val in p3_indices:
-    for i in range(3):
-        p3_str += '%.3f ' % (p_est[val, i])
-with open('pt3_submission.txt', 'w') as file:
-    file.write(p3_str)
+# p3_indices = [6800, 7600, 8400, 9200, 10000]
+# p3_str = ''
+# for val in p3_indices:
+#     for i in range(3):
+#         p3_str += '%.3f ' % (p_est[val, i])
+# with open('pt3_submission.txt', 'w') as file:
+#     file.write(p3_str)
