@@ -63,17 +63,24 @@ Create a python 3.6 environment on conda
 conda create --name py36 python=3.6
 ```
 
-activate env
+Activate env
 
 ```sh
 conda activate py36
 ```
 
-run
+Run
+
+```
+conda install --file requirements.txt
+```
+
+Alternatively,
 
 ```sh
-conda install -r requirements.txt
+pip install -r requirements.txt
 ```
+
 `Notes:` If you're having problems colleting some packages, try to search from a specific channel such as "--channel conda-forge" for example 
 
 ### Environment Setup
@@ -248,7 +255,7 @@ Analysis Notes: @TODO
 
 ## Contributing
 
-Please create a pull request if you want to help this project grow. There are still great stuffs & ideas to add on, or an issue if you encounter any problem.
+Please create a pull request if you want to help this project grow. There are still great stuffs & ideas to be added on, or an issue if you encounter any problem.
 
 `@TODO - list`
 
