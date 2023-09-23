@@ -4,21 +4,23 @@
 
 This is a representative **`motion planning stack`** that avoids both **static** and **dynamic** obstacles while tracking the **center line of a lane**, and while also handling stop sign. 
 
-The system takes a sequence of `way-points` in a given road network on Carla Simulator, and peforms the following tasks until it reaches a goal:
+The system takes a sequence of `way-points` in a given road network on Carla Simulator, and performs the following tasks until it reaches a goal:
 
-- **Task 1:** Static parked obstacle avoidance
+- **Task 1: Static parked obstacle avoidance**
+
+A parked obstacle will be blocking the driving path, and the car must avoid the collision.
 
 <img src="./doc/static-obstacle.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-- A parked obstacle will be blocking the driving path, and the car must avoid the collision.
 
-- **Task 2:** Dynamic obstacle avoidance
+- **Task 2: Dynamic obstacle avoidance**
+
+The car shall follow a lead vehicle moving below the speed limit, and the car shall adapt its velocity profile to accordingly to prevent a collision
 
 <img src="./doc/dynamic-obstacle.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-- The car shall follow a lead vehicle moving below the speed limit, and the car shall adapt its velocity profile to accordingly to prevent a collision
 
-- **Task 3:** Road sign handling - Stop Signs
+- **Task 3: Road sign handling - Stop Sign**
 
 <img src="./doc/stop-sign.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
@@ -31,38 +33,31 @@ class Controller2D(object):
       ...
 ```
 
-## Carla Installation & Environment Setup
+## Dependencies & Environment Setup
 
-- [Modified Carla simulator](#) for this project which has some additional maps included.
-  - Please refer to this [guide](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/resources/customized-carla-simulator) document to download the installation setups
+### Carla Simulator Installation
 
-- After downloading the carla simulator you need to setup your working environment as follow
+1. Download the customized Carla simulator with the intended maps for the project!
 
-<img src="./doc/project-location.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+- Please refer to this [guideline](https://github.com/diesimo-ai/self-driving-car-projects/tree/main/resources/customized-carla-simulator) to download the installation setups from [google drive](#) (large files, I'd to share on google drive) 
 
-1. Navigate to the `PythonClient` folder located in the main `CarlaSimulator` directory.
-2. Replace all the existing files in the `Course4FinalProject` folder with the files from your project repository (either #3 or #10).
-3. Feel free to rename this folder to the name of the project you want to test, such as `p3_or_10_project_name` 
+2. Install carla requirements
 
-## Requirements
+- Go into the CarlaSimulator root folder to find the `requirements.txt` file 
 
-Strongly recommend to work on conda and create a new python environment and then install all your dependencies
-
-- Make sure install the required dependencies for this current version of Carla Simulator first: 
- 
 ```
 - Pillow>=3.1.2
 - numpy>=1.14.5
 - protobuf>=3.6.0
 - pygame>=1.9.4
-- matplotlib>=2.2.2
+- matplotlib>=3.0.0
 - future>=0.16.0
 - scipy>=0.17.0
 ```
 
-- Then, the dependecies for the project are in the `requirements.txt` file of the current folder
-  
-To create a python 3.6 environment on conda
+follow the steps below for quick installation with [conda](https://github.com/conda) or [miniconda](https://docs.conda.io/en/latest/miniconda.html)
+
+Create a python 3.6 environment on conda
 
 ```sh
 conda create --name py36 python=3.6
@@ -74,13 +69,22 @@ activate env
 conda activate py36
 ```
 
-install dependencies for client
+run
 
 ```sh
 conda install -r requirements.txt
 ```
 `Notes:` If you're having problems colleting some packages, try to search from a specific channel such as "--channel conda-forge" for example 
 
+### Environment Setup
+
+- After downloading the carla simulator you need to setup your working environment as follow
+
+<img src="./doc/project-location.png" width="400" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
+
+1. Navigate to the `PythonClient` folder located in the main `CarlaSimulator` directory.
+2. Copy the (all) source files from your project repository (either #3 or #10) and past into `Course4FinalProject` repo (I'm still looking for a proper way to run this efficiently, feel free to leave a suggestion)
+3. Feel free to rename this folder to the name of the project you want to test, such as `p3_or_10_project_name` 
 
 ## Motion Planner Architecture
 
@@ -89,7 +93,7 @@ conda install -r requirements.txt
 ### Module Interfaces Descriptions
 
 - **Mission Planner** 
-  - Given maps on Carla Simulator
+  - Pre-planned map on Carla Simulator, in form of set of waypoints
 - **Behaviour Planner**
   - Finite State Machine (FSM) for handling Stop sign, and stop and go manouveurs+
 
