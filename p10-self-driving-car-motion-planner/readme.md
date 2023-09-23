@@ -113,7 +113,7 @@ class BehaviouralPlanner:
 - **Local Planner**
   - Reactive planner (roll-out algorithm) takes a given path(start, goal), performs path opimization, collision-checking and generates `Path trajectory` and `Velocity Profile` for **control layer** 
 
-  - Path optimizer : `Polynomial Spiral`
+  - Path optimizer : `Polynomial Spiral` 
 ```python
 class PathOptimizer:
 	def __init__(self):
@@ -126,6 +126,7 @@ class PathOptimizer:
         self._yf = 0.0
         self._tf = 0.0
 ```
+  - Confrontal Lattice Planning : predicts a sets of feasible collision-free paths to goal 
   - Circle-based collision checking
 
 ```python
@@ -203,6 +204,20 @@ python module_7.py
 
 ## Expected results
 
+Desciption of objects in the scene 
+
+- `Reference Path`: green line, central path 
+- `Start:` starting point
+- `End:` Goal/final destination
+- `Car:` ego-vehicle + Goal state of the path
+- `Goal states:` 
+  - blue: collision-free 
+  - red: collision detected
+  - gold: selected goal state in the reference to central path 
+- `Parked Car:` blue grid after the start
+- `Lead Car:` in green, the
+- `Stop Sign:` regulatory road sign
+  
 **Task 1:** Static parked obstacle avoidance
 
 <img src="./doc/task1.gif" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
@@ -219,7 +234,7 @@ Analysis Notes: @TODO
 
 <img src="./doc/task3.gif" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-- Stop and go manouveur - here we can see three of vehicle when approaching the stop signs: before, stopped, after
+- Stop and go manouveur - here we can see three of vehicle state when approaching the stop signs: before, stopped, after
 
 **Putting It All Together From: Start to Finish**
 
