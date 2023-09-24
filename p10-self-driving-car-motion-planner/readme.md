@@ -100,9 +100,9 @@ pip install -r requirements.txt
 ### Module Interfaces Descriptions
 
 - **Mission Planner** 
-  - Pre-planned map on Carla Simulator, in form of set of waypoints
+  - Pre-planned Carla Simulator road network, in form of a set of waypoints
 - **Behaviour Planner**
-  - Finite State Machine (FSM) for handling Stop sign, and stop and go manouveurs+
+  - Finite State Machine-Based (FSM): handles Stop sign, stop and go manouveurs
 
 ```python
 # State machine states
@@ -124,7 +124,7 @@ class BehaviouralPlanner:
 - **Local Planner**
   - Reactive planner (roll-out algorithm) takes a given path(start, goal), performs path opimization, collision-checking and generates `Path trajectory` and `Velocity Profile` for **control layer** 
 
-  - Path optimizer : `Polynomial Spiral` 
+  - Path Generation: `Polynomial Spiral Optimization` 
 ```python
 class PathOptimizer:
 	def __init__(self):
@@ -137,8 +137,8 @@ class PathOptimizer:
         self._yf = 0.0
         self._tf = 0.0
 ```
-  - Confrontal Lattice Planning : predicts a sets of feasible collision-free paths to goal 
-  - Circle-based collision checking
+  - Confrontal Lattice Planning: predicts a sets of feasible collision-free paths to goal 
+  - Circle-based collision checking: static obstacle avoidance
 
 ```python
 class CollisionChecker:
@@ -148,7 +148,7 @@ class CollisionChecker:
         self._weight         = weight
 ...
 ```
-- Velocity Profile
+- Velocity Profile Generation: dynamic obstacle avoidance 
 
 ```python
 class VelocityPlanner:
@@ -194,20 +194,20 @@ class Controller2D(object):
 
 ## Usage
 
-1. run Carla simulator first
+1. run Carla simulator **server** from a terminal
 
-If you're building on `windows` run: 
+If you're on `windows` run: 
 
-```batch
+```bat
 CarlaUE4.exe /Game/Maps/RaceTrack -windowed -carla-server -benchmark -fps=30
 ```
 If you're on `linux` run: 
 
-```bash
+```sh
 CarlaUE4.sh /Game/Maps/RaceTrack -windowed -carla-server -benchmark -fps=30
 ```
 
-2. run python main module: 
+2. open another terminal, change the directory to the location of `module_7.py` to start the python **client** and the controller 
 
 ```python 
 python module_7.py
@@ -215,7 +215,7 @@ python module_7.py
 
 ## Expected results
 
-Desciption of objects in the scene 
+Description of objects in the scene 
 
 - `Reference Path`: green line, central path 
 - `Start:` starting point
@@ -231,31 +231,37 @@ Desciption of objects in the scene
   
 **Task 1:** Static parked obstacle avoidance
 
+Takes the samples of the footprint of the obstacle (parked car) and uses circles to approximate the footprint of the ego vehicle along each plan path to compute whether or not the path is in collision with the obstacle.
+
 <img src="./doc/task1.gif" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-- Selects a path index which is closest to the center line as well as far away from collision paths.
+- If yes, we remove the paths in collision with the obstacle (shown in red lines) from our planning process, to avoid the obstacle entirely.
+
 
 **Task 2:** Dynamic obstacle avoidance
 
+The self-driving car follow a lead vehicle that's moving below the speed limit, the planner regulates the velocity profile to prevent a collision
+
 <img src="./doc/col12-last.png" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-Analysis Notes: @TODO
 
 **Task 3:** Road sign handling - Stop Sign
 
+Here we can see three scenarios when the vehicle approaches the stop sign: `smooth deceleration`, `vehicle fully stopped`, and `acceleration` into the intersection down the goal
+
 <img src="./doc/task3.gif" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-- Stop and go manouveur - here we can see three of vehicle state when approaching the stop signs: before, stopped, after
+This is a relatively simple scenario that can be handled using a state machine-based behavior planner.
 
 **Putting It All Together From: Start to Finish**
 
 <img src="./doc/motion-planner-final.gif" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-Analysis Notes: @TODO 
-
 ## Contributing
 
-Please create a pull request if you want to help this project grow. There are still great stuffs & ideas to be added on, or an issue if you encounter any problem.
+Please create a pull request if you want to help this project grow. Or create an issue if you encounter any problem.
+
+There are still great stuffs & ideas to be added on, feel free to add your own in the list below:
 
 `@TODO - list`
 
