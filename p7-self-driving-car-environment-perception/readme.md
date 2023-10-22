@@ -58,7 +58,7 @@ or if you're on [conda](https://github.com/conda) or [miniconda](https://docs.co
 ```sh
 conda install --file requirements.txt
 ```
-`Notes:` If you're having problems colleting some packages, try to search from a specific channel by adding "--channel" flag. For example "--channel conda-forge" 
+`Notes:` If you're having problems collecting some packages, try to search from a specific channel by adding "--channel" flag. For example "--channel conda-forge" 
 
 ## Usage
 
