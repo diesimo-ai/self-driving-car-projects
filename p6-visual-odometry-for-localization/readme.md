@@ -1,46 +1,53 @@
-# Visual Odometry for Localization
+# Visual Odometry for Localization in Autonomous Driving
 
 ## Overview
 
-This a Visual Features, which estimates an autonomous `vehicle trajectory` from images taken with a monocular camera set up on the vehicle.
+This is a Visual Odometry which estimates the vehicle trajectory based on visual data captured by the vehicle monocular camera.
 
 <img src="./doc/pair-imgs-pxls.png" width="600" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
-The system perfom the following tasks : 
+The system takes visual data (i.e: images, videos ) as input and performs the following tasks: 
 - Extract features from the photographs taken with a camera setup on the vehicle.
 - Use the extracted features to find matches between the features in different photographs.
 - Use the found matches to estimate the camera motion between subsequent photographs.
 - Use the estimated camera motion to build the vehicle trajectory (based on image pair in the dataset)
 
-### Dataset : images, images_rbg, depth_maps ... 
+### Dataset Description : images, images_rbg, depth_maps ... 
 
-The data samples were taken from Carla Simulator.
+The input datas were collected from Carla Simulator.
 
-- **Data location** :
-  - [data](self-driving-car-projects\p6-visual-odometry-for-localization\data) folder (600MB)
-    - `depth` - 52 data frames
-    - `rgb` - 52 data frames
+- [data](self-driving-car-projects\p6-visual-odometry-for-localization\data) folder (600MB)
+  - `depth` - 52 data frames
+  - `rgb` - 52 data frames
 
-You need to create a dataset handler object to access the datas. The dataset handler class is definded in the [m2bk module](m2bk.py), and allows to read and iterate through samples
+We use the `DatasetHandler()` class defined in the [m2bk module](./m2bk.py), to access and extract datas from the dataset.
 
 ```python
 dataset_handler = DatasetHandler()
 ```
-- **Dataset handler Attributes**
+We then use the `dataset_handler` to access the specific frame we want.
 
-The frame content can be accessed by using `images`, `images_rgb`, `depth_maps` attributes of the dataset handler object along with the index of the requested frame.
+For example, to access a single image frame and visualize it.
 
+```python
+image = dataset_handler.image
+plt.imshow(image)
 ```
-- dataset_handler.images : grayscales samples
-- dataset_handler.images_rgb : 3-channels imgs
-- dataset_handler.depth_maps : depth maps
-- dataset_handler.num_frame : Number of frames
-- dataset_handler.k : Calibration matrix K
-```
+
 To access a single image sample
 
 ```python
 image = dataset_handler.images[0]
+```
+
+Other attributes:
+
+```
+- dataset_handler.images : grayscales samples
+- dataset_handler.images_rgb : colored imgs
+- dataset_handler.depth_maps : depth maps
+- dataset_handler.num_frame : number of frames
+- dataset_handler.k : Calibration matrix K
 ```
 
 ## Requirements
@@ -60,18 +67,19 @@ You'll need a notebook tool such as a [Google Colab](https://colab.research.goog
 
 Then simply run the notebook each cell sequentially to see the results.
 
-## Results
+## Final Results
 
 <img src="./doc/vo-trajectory-ouput-0.png" width="800" style="border:0px solid #FFFFFF; padding:1px; margin:1px"> 
 
 ## Contributing
 
-Please create a pull request if you want to take this project to a new next level. There are still great cool stuffs & ideas to add on, do not hesitate to add your own below.
+Please create a pull request if you want to take this project grow. there are still many stuffs to be added on. Also, do not hesitate to open an issue if you encounter any problem
+
 
 `@TODO - list`
 
 ```
-- Convert notebook into a python project
+- Split the notebook into python modules
 - Package the project into a PyPi package
 - Create a C++ version of the model
 ...
